@@ -1,0 +1,11 @@
+.marquee {
+  background: #cffd70;
+  border-block: 1px solid #000;
+  font-size: 22px;
+  font-weight: 500;
+  padding-block: 5px;
+}
+
+.marquee p {
+  margin-left: 50px;
+}

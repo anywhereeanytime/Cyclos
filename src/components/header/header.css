@@ -1,0 +1,16 @@
+.header_row {
+  margin: 25px 200px 0;
+  display: flex;
+  column-gap: 40px;
+  justify-content: end;
+  font-size: 24px;
+}
+
+.header_row a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header_row a:hover {
+  border-bottom: 3px solid #c80100;
+}

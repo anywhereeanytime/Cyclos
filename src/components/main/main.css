@@ -1,0 +1,35 @@
+.main-container {
+  display: flex;
+  padding: 40px;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.main-text-container {
+  position: relative;
+}
+
+.main-image-container img {
+  border: 1px solid black;
+  border-radius: 34px;
+  max-width: 400px;
+}
+
+.main-title {
+  margin-block: 30px;
+}
+
+.main-logo {
+  position: absolute;
+  top: 30px;
+  right: -20px;
+}
+
+.main-text {
+  font-weight: bold;
+  max-width: 412px;
+  font-size: 17px;
+  line-height: 1.4;
+  margin-bottom: 40px;
+  cursor: default;
+}

@@ -1,0 +1,15 @@
+body {
+  background-color: #fffdfe;
+}
+
+.serif {
+  font-family: "DM Serif Display", serif;
+}
+
+.sans {
+  font-family: "DM Sans", sans-serif;
+}
+
+.title1 {
+  font-size: 100px;
+}

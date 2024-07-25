@@ -1,0 +1,39 @@
+.footer {
+  background-color: #2752ff;
+  width: 100%;
+  color: #fff;
+  padding: 30px 30px 50px;
+  font-size: 17px;
+  border-top: 1px solid #000;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  justify-items: start;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+a {
+  color: inherit;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.copywrite {
+  font-size: 13px;
+}
+
+.column .list img {
+  width: 22%;
+  padding-right: 15px;
+}

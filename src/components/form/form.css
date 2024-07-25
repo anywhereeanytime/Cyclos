@@ -1,0 +1,102 @@
+.square-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 90px 0;
+}
+
+.form-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+}
+
+.purple-container {
+  width: 100%;
+  height: 100%;
+  background-color: #ae92e5;
+  position: absolute;
+  padding: 20px;
+  border: 1px solid #000;
+  border-radius: 19px;
+  z-index: -1;
+  top: -10px;
+  left: -10px;
+}
+
+.white-container {
+  border: 1px solid #000;
+  border-radius: 19px;
+  background-color: #fff;
+  padding: 20px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.login {
+  font-size: 28px;
+  font-weight: 600;
+  background-color: #dce1f6;
+  border-radius: 149px;
+  padding: 5px 25px;
+  border: 1px solid #000;
+  transform: rotate(-20deg);
+  position: absolute;
+  top: -20px;
+  left: -80px;
+  z-index: 5;
+}
+
+.completed-one {
+  font-size: 23px;
+  color: #c80100;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-input > :nth-child(3) {
+  gap: 20px;
+}
+
+.button-next {
+  margin-top: 100px;
+}
+
+.button-google {
+  border: 1px solid #000;
+  border-radius: 19px;
+  font-size: 23px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 340px;
+  padding: 3px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.create-acc-sign {
+  border: 1px solid #000;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: #ebeef7;
+  border-radius: 149px;
+  padding: 5px 10px;
+  border: 1px solid #000;
+  transform: rotate(7deg);
+  position: absolute;
+  z-index: 5;
+  top: 39%;
+  right: 10%;
+}
