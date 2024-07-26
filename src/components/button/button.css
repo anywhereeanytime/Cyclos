@@ -12,6 +12,15 @@
   border-radius: 19px;
   padding: 5px 18px;
   font-size: 20px;
+  transition: transform 0.1s ease;
+}
+
+.background-pink:hover {
+  transform: translate(-3px, -3px);
+}
+
+.background-pink:active {
+  transform: translate(-9px, -9px);
 }
 
 .background-transp {

@@ -1,6 +1,6 @@
 import "./../input/input.css";
 
-const Input = ({ label, id, onChange, type, name }) => {
+const Input = ({ label, id, onChange, type, name, value }) => {
   return (
     <div className="input-wrapper serif">
       <label htmlFor={id}>{label}</label>
@@ -10,6 +10,7 @@ const Input = ({ label, id, onChange, type, name }) => {
         id={id}
         type={type}
         onChange={onChange}
+        value={value}
       />
     </div>
   );

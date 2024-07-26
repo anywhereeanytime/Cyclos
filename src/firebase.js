@@ -1,6 +1,6 @@
 /* === Firebase Setup === */
 import { initializeApp } from "firebase/app";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth } from "firebase/auth";
 
 const apiKey = import.meta.env.VITE_API_KEY;
 
@@ -13,7 +13,7 @@ const firebaseConfig = {
   appId: "1:272890756542:web:b7414fe52bf1b683798def",
 };
 
-const app = initializeApp(firebaseConfig);
+export const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 
 /* === Firebase Setup === */

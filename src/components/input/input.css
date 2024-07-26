@@ -20,4 +20,5 @@ input {
   border-radius: 19px;
   border: 1px solid #000;
   box-sizing: border-box;
+  text-align: center;
 }

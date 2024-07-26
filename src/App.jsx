@@ -6,22 +6,42 @@ import Button from "./components/button/Button";
 import Input from "./components/input/Input";
 import MarqueeStyled from "./components/marquee/Marquee";
 import { useState } from "react";
+import { Routes, Route, Link } from "react-router-dom";
+import Calendar from "./components/pages/Calendar";
+import Mainpage from "./components/pages/Mainpage";
+import Articles from "./components/pages/Articles";
+import Aboutus from "./components/pages/Aboutus";
+import Donate from "./components/pages/Donate";
+
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
+import { auth } from "./firebase";
 
 function App() {
-  // ЗДЕСЬ НАЧИНАЕТСЯ ЛОГИКА С ФОРМОЙ
-  const [formData, setFormData] = useState({
-    yourName: "",
-    yourMail: "",
-  });
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-  function handleChange(event) {
-    console.log(event.target);
-    const { name, value } = event.target;
-    setFormData((prevFormData) => ({
-      ...prevFormData,
-      [name]: value,
-    }));
-  } // ЗДЕСЬ ЗАКАНЧИВАЕТСЯ. НУЖНО СДЕЛАТЬ ОТДЕЛЬНЫМ КОМПОНЕНТОМ
+  function createAccount(e) {
+    e.preventDefault();
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((user) => {
+        setEmail("");
+        setPassword("");
+      })
+      .catch((error) => console.log(error));
+  }
+
+  function logIn(e) {
+    e.preventDefault();
+    signInWithEmailAndPassword(auth, email, password)
+      .then((user) => {
+        setEmail("");
+        setPassword("");
+      })
+      .catch((error) => console.log(error));
+  }
 
   return (
     <div className="App">
@@ -30,14 +50,14 @@ function App() {
       <MarqueeStyled />
 
       <Form isLogin={true} completedOne={true}>
-        <form className="form-input" action="">
+        <form className="form-input">
           <Input
             label={"Your email"}
             id={"email"}
             type="email"
             name="yourEmail"
-            value={formData.yourEmail}
-            onChange={(e) => handleChange(e)}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
 
           <Input
@@ -45,16 +65,27 @@ function App() {
             id={"password"}
             type="password"
             name="yourMail"
-            value={formData.yourPassword}
-            onChange={(e) => handleChange(e)}
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
           />
           <div style={{ display: "flex" }}>
-            <Button>Create account</Button>
-            <Button color={"#CFFD70"}>Log in</Button>
+            <Button onClick={createAccount} type="submit">
+              Create account
+            </Button>
+            <Button onClick={logIn} color={"#CFFD70"}>
+              Log in
+            </Button>
           </div>
         </form>
       </Form>
       <Footer />
+      <Routes>
+        <Route path="/articles" element={<Articles />} />
+        <Route path="/aboutus" element={<Aboutus />} />
+        <Route path="/donate" element={<Donate />} />
+        <Route path="/calendar" element={<Calendar />} />
+        <Route path="/mainpage" element={<Mainpage />} />
+      </Routes>
     </div>
   );
 }
