@@ -7,7 +7,7 @@ const Header = () => {
       <nav className="header_nav">
         <ul className="header_row serif">
           <li>
-            <Link to="/articles">Articles</Link>
+            <Link to="/">Cyclos</Link>
           </li>
           <li>
             <Link to="/donate">Donate</Link>

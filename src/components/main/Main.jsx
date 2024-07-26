@@ -1,7 +1,9 @@
 import "./main.css";
 import mainImg from "./../../images/main.jpg";
 import mainLogo from "./../../images/Vector.png";
-import Button from "../button/Button";
+import Button from "./../elements/button/Button";
+import MarqueeStyled from "./../elements/marquee/Marquee";
+import Form from "../elements/form/Form";
 
 const Main = () => {
   return (
@@ -26,6 +28,8 @@ const Main = () => {
           <img src={mainImg} alt="" />
         </div>
       </div>
+      <MarqueeStyled />
+      <Form />
     </section>
   );
 };

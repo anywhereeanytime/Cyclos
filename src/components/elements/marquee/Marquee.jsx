@@ -1,5 +1,5 @@
 import Marquee from "react-fast-marquee";
-import "./../marquee/marquee.css";
+import "./marquee.css";
 
 const MarqueeStyled = () => {
   return (

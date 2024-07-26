@@ -1,8 +1,8 @@
-import "./footer.css";
-import footerVector from "./../../images/FooterVector.svg";
-import instagram from "./../../images/instagram emoji.svg";
-import appStore from "./../../images/app store.svg";
-import playMarket from "./../../images/media play.svg";
+import "./../footer/footer.css";
+import footerVector from "./../../../images/FooterVector.svg";
+import instagram from "./../../../images/instagram emoji.svg";
+import appStore from "./../../../images/app store.svg";
+import playMarket from "./../../../images/media play.svg";
 
 const Footer = () => {
   return (
