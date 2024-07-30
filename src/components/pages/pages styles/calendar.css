@@ -1,5 +1,17 @@
 .user-greeting {
-  font-size: 75px;
+  font-size: 70px;
   text-align: center;
   font-weight: 500;
+}
+
+.duration-period {
+  font-size: 26px;
+}
+
+.calendar-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }

@@ -11,15 +11,19 @@ import {
 import { auth } from "../../../firebase";
 const provider = new GoogleAuthProvider();
 import { useNavigate } from "react-router-dom";
+import { useUser } from "./../UserNameContext";
 
 const Form = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const { setUserName } = useUser();
 
   function signInWithGoogle() {
     signInWithPopup(auth, provider)
       .then((result) => {
+        const user = result.user;
+        setUserName(user.displayName || "darling");
         console.log("Signed in with Google");
         navigate("/calendar");
       })
