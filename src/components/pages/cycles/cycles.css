@@ -1,9 +1,12 @@
+.cycle-page {
+  margin-inline: 30px;
+}
+
 .cycle-defenition {
   font-size: 3.2rem;
   max-width: 650px;
   text-align: center;
   line-height: 3.9rem;
-  margin-top: 20px;
   margin-bottom: 10px;
 }
 
@@ -13,35 +16,57 @@
   background: #e0def5;
   border-radius: 19px;
   border: 1px solid #000;
-  max-width: 600px;
+  max-width: 800px;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   padding: 20px;
 }
 
-/* Accordion */
-.accordion {
-  background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  text-align: left;
-  border: none;
-  outline: none;
-  transition: 0.4s;
+.page-wrapper {
+  position: relative;
 }
 
-.active,
-.accordion:hover {
-  background-color: #ccc;
+/* Accordion */
+.accordion-title {
+  color: #000;
+  cursor: pointer;
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #000;
+  outline: none;
+  transition: 0.4s;
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  border-radius: 19px;
+}
+
+.accordion-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px 30px;
 }
 
 .panel {
-  padding: 0 18px;
-  background-color: white;
+  font-size: 1.3rem;
+  font-weight: 500;
   display: none;
   overflow: hidden;
+  margin-bottom: 20px;
+  border: 3px solid #ceef7e;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.cycle-btn-element {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.cycle-element-icon {
+  width: 50px;
+  height: auto;
 }
 
 /* Accordion */

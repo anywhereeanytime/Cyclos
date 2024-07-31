@@ -4,8 +4,16 @@ import mainLogo from "./../../images/Vector.png";
 import Button from "./../elements/button/Button";
 import MarqueeStyled from "./../elements/marquee/Marquee";
 import Form from "../elements/form/Form";
+import React, { useRef } from "react";
 
 const Main = () => {
+  const formRef = useRef(null);
+
+  const scrollToForm = () => {
+    if (formRef.current) {
+      formRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <section className="main">
       <div className="main-container">
@@ -22,14 +30,16 @@ const Main = () => {
             consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
             labore et dolore magna aliqua. Ut enim ad minim veniam.
           </div>
-          <Button>Goooooooooo!</Button>
+          <Button onClick={scrollToForm}>Goooooooooo!</Button>
         </div>
         <div className="main-image-container">
           <img src={mainImg} alt="" />
         </div>
       </div>
       <MarqueeStyled />
-      <Form />
+      <div ref={formRef}>
+        <Form />
+      </div>
     </section>
   );
 };

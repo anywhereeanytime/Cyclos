@@ -1,7 +1,18 @@
 import React, { useState } from "react";
 import "./../cycles/cycles.css";
+import bodyIcon from "./../../../images/body.png";
+import vaginaIcon from "./../../../images/vagina.png";
+import foodIcon from "./../../../images/food.png";
+import workoutIcon from "./../../../images/workout.png";
 
-const AccordionItem = ({ title, content, icon }) => {
+const accordionItems = [
+  { title: "body", icon: bodyIcon },
+  { title: "vagina", icon: vaginaIcon },
+  { title: "food", icon: foodIcon },
+  { title: "workout", icon: workoutIcon },
+];
+
+const AccordionItem = ({ title, icon, content }) => {
   const [isActive, setIsActive] = useState(false);
 
   const toggleAccordion = () => {
@@ -11,27 +22,32 @@ const AccordionItem = ({ title, content, icon }) => {
   return (
     <div className="accordion-item">
       <button
-        className={`accordion sans ${isActive ? "active" : ""}`}
+        className={`cycle-btn-element sans ${isActive ? "active" : ""}`}
         onClick={toggleAccordion}
       >
-        <span className="icon">{icon}</span>
-        {title}
+        <span className="cycle-element-icon">
+          <img src={icon} alt={title} />
+        </span>
+        <span className="accordion-title">{title}</span>
       </button>
-      <div className="panel" style={{ display: isActive ? "block" : "none" }}>
+      <div
+        className="sans panel"
+        style={{ display: isActive ? "block" : "none" }}
+      >
         {content}
       </div>
     </div>
   );
 };
 
-const Accordion = ({ items }) => {
+const Accordion = ({ contents }) => {
   return (
     <div className="accordion-container">
-      {items.map((item, index) => (
+      {accordionItems.map((item, index) => (
         <AccordionItem
           key={index}
           title={item.title}
-          content={item.content}
+          content={contents[index]}
           icon={item.icon}
         />
       ))}
