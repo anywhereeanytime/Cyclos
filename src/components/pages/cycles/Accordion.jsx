@@ -21,10 +21,7 @@ const AccordionItem = ({ title, icon, content }) => {
 
   return (
     <div className="accordion-item">
-      <button
-        className={`cycle-btn-element sans ${isActive ? "active" : ""}`}
-        onClick={toggleAccordion}
-      >
+      <button className="cycle-btn-element sans" onClick={toggleAccordion}>
         <span className="cycle-element-icon">
           <img src={icon} alt={title} />
         </span>
