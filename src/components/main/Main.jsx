@@ -1,10 +1,10 @@
 import "./main.css";
-import mainImg from "./../../images/main.jpg";
-import mainLogo from "./../../images/Vector.png";
+import mainImg from "/images/main.jpg";
+import mainLogo from "/images/Vector.png";
 import Button from "./../elements/button/Button";
-import MarqueeStyled from "./../elements/marquee/Marquee";
 import Form from "../elements/form/Form";
-import React, { useRef } from "react";
+import { useRef } from "react";
+import MarqueeStyled from "../elements/marquee/Marquee";
 
 const Main = () => {
   const formRef = useRef(null);

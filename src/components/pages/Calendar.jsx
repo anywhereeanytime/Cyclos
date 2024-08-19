@@ -1,8 +1,8 @@
-import Marquee from "./../elements/marquee/Marquee";
+import MarqueeStyled from "./../elements/marquee/Marquee";
 import "./pages styles/calendar.css";
 import Button from "../elements/button/Button";
-import mainLogo from "./../../images/Vector.png";
-import React, { useState } from "react";
+import mainLogo from "/images/Vector.png";
+import { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useNavigate } from "react-router-dom";
@@ -24,17 +24,14 @@ const Calendar = () => {
       return;
     }
 
-    // Define the phases
     const menstruationEnd = endDate;
     const follicularEnd = addDays(menstruationEnd, 9);
     const ovulationEnd = addDays(follicularEnd, 3);
     const lutealEnd = addDays(ovulationEnd, 13);
 
-    // Get today's date
     const today = new Date();
     console.log(today);
 
-    // Determine the current phase
     let currentPhase = "";
     if (today <= menstruationEnd) {
       currentPhase = "Menstruation";
@@ -53,7 +50,6 @@ const Calendar = () => {
       navigate("/menstruation");
     }
 
-    // Display the results
     console.log(`Current Phase: ${currentPhase}`);
   };
 
@@ -67,7 +63,7 @@ const Calendar = () => {
 
   return (
     <main>
-      <Marquee />
+      <MarqueeStyled />
       <div className="calendar-wrapper">
         <h1 className="serif user-greeting">hi, {displayName}!</h1>
         <Button>on our way to hack your cycle!</Button>

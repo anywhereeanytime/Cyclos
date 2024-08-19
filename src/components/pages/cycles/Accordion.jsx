@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./../cycles/cycles.css";
-import bodyIcon from "./../../../images/body.png";
-import vaginaIcon from "./../../../images/vagina.png";
-import foodIcon from "./../../../images/food.png";
-import workoutIcon from "./../../../images/workout.png";
+import bodyIcon from "/images/body.png";
+import vaginaIcon from "/images/vagina.png";
+import foodIcon from "/images/food.png";
+import workoutIcon from "/images/workout.png";
 
 const accordionItems = [
   { title: "body", icon: bodyIcon },

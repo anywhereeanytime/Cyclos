@@ -2,13 +2,13 @@ import "./form.css";
 import { useState } from "react";
 import Input from "./../input/Input";
 import Button from "../button/Button";
-import iconGoogle from "./../../../images/icon-google.svg";
+import iconGoogle from "/images/icon-google.svg";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
 } from "firebase/auth";
-import { auth } from "../../../firebase";
+import { auth } from "/src/firebase";
 const provider = new GoogleAuthProvider();
 import { useNavigate } from "react-router-dom";
 import { useUser } from "./../UserNameContext";

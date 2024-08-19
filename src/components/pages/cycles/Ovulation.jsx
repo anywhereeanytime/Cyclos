@@ -1,8 +1,8 @@
 import "./../cycles/cycles.css";
 import Button from "../../elements/button/Button";
-import Marquee from "./../../elements/marquee/Marquee";
+import MarqueeStyled from "./../../elements/marquee/Marquee";
 import Accordion from "./Accordion";
-import mainLogo from "./../../../images/Vector.png";
+import mainLogo from "/images/Vector.png";
 
 const Ovulation = () => {
   const contents = [
@@ -14,7 +14,7 @@ const Ovulation = () => {
 
   return (
     <main>
-      <Marquee />
+      <MarqueeStyled />
       <div className="cycle-page">
         <div className="flex page-wrapper">
           <h2 className="serif cycle-defenition">
