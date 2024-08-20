@@ -1,8 +1,25 @@
-# React + Vite
+# Cyclos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Cyclos** is an app that helps you track your menstrual cycle based on your personal data. *Note: A mobile version is not available at this time.*
 
-Currently, two official plugins are available:
+## Screenshots
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Main page:**  
+  ![Main page](https://i.imgur.com/pvI4dkj.png)
+
+**Sign up page:**  
+  ![Main page](https://i.imgur.com/SGzLNTE.png)
+
+**Calendar page:**  
+  ![Main page](https://i.imgur.com/wAuRZtW.png)
+
+**Results page:**  
+  ![Main page](https://i.imgur.com/XBqs7WZ.png)
+
+  ## Technology used
+
+  - React.js
+  - Firebase
+  - Tailwind
+
+  
